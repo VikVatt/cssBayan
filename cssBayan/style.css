@@ -1,1 +1,97 @@
+@font-face {
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    src: local("Lato"),
+         url("../cssBayan/fonts/Lato-Black.woff2") format('woff2'),
+         url("../cssBayan/fonts/Lato-Black.woff") format('woff');
+         font-display: swap;
+  }
 
+html, body {
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #0e0e15;
+}
+
+html {
+    scroll-behavior:smooth;
+  }
+
+img {
+    max-width: 100%;
+    line-height: auto;
+}
+
+h1 {
+    color: #f4f412;
+}
+
+.memes {
+    max-width: 30rem;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.memes-item {
+    margin-bottom: 0.5rem;
+    border: 0.05em solid #f4f412;
+}
+
+.memes-title {
+    display: block;
+    padding: 0.5rem 1rem;
+    position: relative;
+    color: #fff;
+    transition: background .2s ease-out;
+}
+
+.memes-title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 1rem 1rem 0 1rem;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.memes-title:hover {
+    background-color: #f4f412;
+}
+
+.memes-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.memes-input:checked ~ .memes-title {
+    background-color: #f4f412;
+}
+
+.memes-input:checked ~ .memes-title:after {
+    border-style: solid;
+    border-width: 0 1rem 1rem 1rem;
+    border-color: transparent transparent #fff transparent;
+}
+
+.memes-input:checked ~ .memes-content {
+    display: inline-block;
+}
+
+.memes-content {
+    display: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    transition: ease 2s;
+}
+
+.memes-content:hover {
+    scale: 1.02;
+}
