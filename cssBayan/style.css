@@ -107,7 +107,7 @@ h1 {
 
 .memes-input:checked ~ .memes-content {
     transform: scaleY(1);
-    width: 100%;
+    width: 90%;
 }
 
 
