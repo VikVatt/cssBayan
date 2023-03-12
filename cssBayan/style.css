@@ -83,12 +83,16 @@ h1 {
     position: absolute;
 }
 
+
 .memes-content {
-    display: none;
+    transform: scaleY(0);
+    transform-origin: 50% 50%;
+    width: 0%;
     padding: 0.5rem 1rem;
     color: #fff;
-    transition: ease 4s;
+    transition: ease 2s;
 }
+
 
 .memes-input:checked ~ .memes-title {
     background-color: #f4f412;
@@ -98,10 +102,12 @@ h1 {
     border-style: solid;
     border-width: 0 1rem 1rem 1rem;
     border-color: transparent transparent #fa0000 transparent;
+    transition: ease 2s;
 }
 
 .memes-input:checked ~ .memes-content {
-    display: inline-block;
+    transform: scaleY(1);
+    width: 100%;
 }
 
 
@@ -111,10 +117,6 @@ h1 {
 
 
 .memes-item:hover .memes-content {
-    display: inline-block;
-}
-
-
-.memes-title:hover {
-    background-color: #f4f412;
+    transform: scaleY(1);
+    width: 90%;
 }
