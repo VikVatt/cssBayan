@@ -1,3 +1,16 @@
+@media (max-width: 820px) {
+    html {
+      font-size: 0.5rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    html {
+      font-size: 0.4rem;
+    }
+  }
+
+
 @font-face {
     font-family: Lato;
     font-weight: 900;
@@ -24,9 +37,11 @@ img {
     line-height: auto;
 }
 
+
 h1 {
     color: #f4f412;
 }
+
 
 .memes {
     max-width: 30rem;
@@ -45,6 +60,7 @@ h1 {
     position: relative;
     color: #fff;
     transition: background .2s ease-out;
+    cursor: pointer;
 }
 
 .memes-title:after {
@@ -59,16 +75,19 @@ h1 {
     transform: translateY(-50%);
 }
 
-.memes-title:hover {
-    background-color: #f4f412;
-}
-
 .memes-input {
     width: 0;
     height: 0;
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
+}
+
+.memes-content {
+    display: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    transition: ease 4s;
 }
 
 .memes-input:checked ~ .memes-title {
@@ -78,20 +97,24 @@ h1 {
 .memes-input:checked ~ .memes-title:after {
     border-style: solid;
     border-width: 0 1rem 1rem 1rem;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #fa0000 transparent;
 }
 
 .memes-input:checked ~ .memes-content {
     display: inline-block;
 }
 
-.memes-content {
-    display: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    transition: ease 2s;
-}
 
 .memes-content:hover {
     scale: 1.02;
+}
+
+
+.memes-item:hover .memes-content {
+    display: inline-block;
+}
+
+
+.memes-title:hover {
+    background-color: #f4f412;
 }
