@@ -1,0 +1,136 @@
+@media (max-width: 820px) {
+    html {
+      font-size: 0.5rem;
+    }
+  }
+
+@media (max-width: 320px) {
+    html {
+      font-size: 0.4rem;
+    }
+  }
+
+@media (hover: hover) {
+    .memes {
+      cursor: pointer;
+    }
+
+    .memes-item .memes-title {
+      cursor: pointer;
+    }
+}
+
+
+@font-face {
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    src: local("Lato"),
+         url("../cssBayan/fonts/Lato-Black.woff2") format('woff2'),
+         url("../cssBayan/fonts/Lato-Black.woff") format('woff');
+         font-display: swap;
+  }
+
+html, body {
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #0e0e15;
+}
+
+html {
+    scroll-behavior:smooth;
+  }
+
+img {
+    max-width: 100%;
+    line-height: auto;
+}
+
+
+h1 {
+    color: #f4f412;
+}
+
+
+.memes {
+    max-width: 30rem;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.memes-item {
+    margin-bottom: 0.5rem;
+    border: 0.05em solid #f4f412;
+}
+
+.memes-title {
+    display: block;
+    padding: 0.5rem 1rem;
+    position: relative;
+    color: #fff;
+    transition: background .2s ease-out;
+    cursor: pointer;
+}
+
+.memes-title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 1rem 1rem 0 1rem;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.memes-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+
+.memes-content {
+    transform: scaleY(0);
+    transform-origin: 50% 50%;
+    width: 0%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #fff;
+    transition: ease 2s;
+}
+
+
+.memes-input:checked ~ .memes-title {
+    background-color: #f4f412;
+}
+
+.memes-input:checked ~ .memes-title:after {
+    border-style: solid;
+    border-width: 0 1rem 1rem 1rem;
+    border-color: transparent transparent #fa0000 transparent;
+    transition: ease 2s;
+}
+
+.memes-input:checked ~ .memes-content {
+    transform: scaleY(1);
+    width: 90%;
+}
+
+
+.memes-content:hover {
+    scale: 1.02;
+}
+
+
+.memes-item:hover .memes-content {
+    transform: scaleY(1);
+    width: 90%;
+}
+
+.memes-title:hover {
+    background-color: #f4f412;
+}
